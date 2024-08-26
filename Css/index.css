@@ -10,6 +10,7 @@ body {
     font-family: "Goldman", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-image: url(../Imagens/StockCake-Wine\ selection\ contemplation_1724417811.jpg);
 }
 
 main {
@@ -17,13 +18,13 @@ main {
     height: 100%;
     grid-template-columns: 54% 46%;
     grid-template-areas: "conteudoInformacao conteudoLogin";
-    background-color: #FFFFFF;
+    background-color: #ffffff31;
 }
 
 .conteudoInformacao {
     grid-area: conteudoInformacao;
-    background-color: #008575;    
-    box-shadow: 1px 1px 3px #008575;
+    background-color: #008576;    
+    box-shadow: 1px 1px 3px #07b39f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +52,7 @@ main {
         top: 660px;
         left: 63%;
         position: fixed;
+        
 }
 
 .conteudoLogin {
@@ -129,8 +131,9 @@ form a{
     text-decoration: none;
     color: black;
 }
-a:hover{
-    color: white;
+button:hover{
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
 }
 footer {
     position: absolute;

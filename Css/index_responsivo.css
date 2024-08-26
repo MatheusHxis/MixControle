@@ -114,6 +114,13 @@
         width: 20vw;
     }
 }
+@media (max-width: 1366px)and (max-height: 768px){
+    .conteudoInformacao > img {
+        position: absolute;
+            top: 60%;
+            left: 52%;
+    }
+}
 @media (max-width: 1360px)and (max-height: 768px){
     .conteudoInformacao > h1 {
         font-size: 50px;
