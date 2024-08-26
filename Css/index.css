@@ -126,6 +126,7 @@ form > button{
     font-weight: 700;
     font-style: normal;
     border-bottom: none;
+    box-shadow: 1px 2px 10px black;
 }
 form a{
     text-decoration: none;

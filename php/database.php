@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db_name = "task_manager";
+$db_name = "mixcontrole";
 
 // Criar conexão
 $conn = new mysqli($servername, $username, $password, $db_name);

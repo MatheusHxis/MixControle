@@ -1,12 +1,12 @@
 <?php
-include "";
+include_once "database.php";
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT , name, email, password FROM  WHERE email = ?";
+    $sql = "SELECT * , name, email, password FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -16,21 +16,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
             // Define as variáveis de sessão
-            $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['id'] = $user['id'];
             $_SESSION['name'] = $user['name'];
             // Redirecionamento para a página inicial
-            header('Location: ');
+            header('Location: ../Html\segundaParte.html');
             exit;
-        } else {
-            echo "Senha incorreta.";
+        }  else {
+            echo "<script>
+                alert('Senha incorreta.');
+                setTimeout(function() {
+                    window.location.href = '../login.html';
+                }, 50);
+            </script>";
         }
+        
     } else {
-        echo "Usuário não encontrado.";
-    }
+        echo "<script>
+        alert('Conta não registrada');
+        setTimeout(function() {
+            window.location.href = '../login.html';
+        }, 50);
+    </script>";
+    }    
     $stmt->close();
     $conn->close();
 } else {
     // Caso não o metodo não seja POST, então retorna para a página inicial em logoff
-    header('Location: ');
+    header('Location: ../login.html');
     exit;
 }
+
+?>
+
+
