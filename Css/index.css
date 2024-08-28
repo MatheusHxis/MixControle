@@ -131,6 +131,7 @@ form > button{
 form a{
     text-decoration: none;
     color: black;
+    margin-right: 48px;
 }
 button:hover{
     transition: all 200ms ease-in;
@@ -155,8 +156,4 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
-footer > p {
-    font-size: 20px;
-    margin-right: 10px;
 }

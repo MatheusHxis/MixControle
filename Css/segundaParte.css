@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+body{
+    overflow:hidden;
+    font-family: "Goldman", sans-serif;
+    font-weight: 530;
+    font-style: normal;
+}
+
+.bloco {
+    width: 280px;
+    height: 623px;
+    background-color: #008575;
+    border: 1px solid black;
+    left: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.425);
+}
+
+.bloco > h2{
+    font-size: 25px;
+    left: 90px;
+    color: white ;
+    top: 18px;
+    font-family: "Goldman", sans-serif; 
+    position: relative;
+    
+}
+.bloco > ul {
+    margin-top: 60px;
+    list-style: none;
+    color: black;
+    font-size: 12px;
+}
+
+.bloco > ul > li {
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: white;
+    padding: 3px;
+    width: 200px;
+    position: relative;
+    right: 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+.bloco > #sair {
+    margin-top: 370px;
+    margin-left: 15px;
+}
+.bloco > #sair > li{
+    width: 75px;
+    text-align: center;
+}
+
+.bloco > ul>  li:hover {
+    color: #008575;
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+}
+
+/*
+.bloco > #button1{
+    font-size: 17px;
+    font-family: "Goldman", sans-serif;
+    left: 7px;
+    margin-top: 50px;
+    bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-style: normal;
+    border-bottom: none;
+}
+
+.bloco #button2{
+    font-size: 17px;
+    font-family: "Goldman", sans-serif;
+    right: 140px;
+    top: 50px;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+}
+.bloco #button3{
+    font-size: 17px;
+    font-family: "Goldman", sans-serif;
+    left: 8px;
+    top: 80px;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+}
+.bloco #button4{
+    position: relative;
+    top: 420px;
+    font-size: 17px;
+    border-radius: 5px;
+    right: 80px;
+    cursor: pointer;
+}
+*/
+.barra {
+    position: relative;
+    bottom: 615px;
+    left: 710px;
+    background-color: #008575;
+    border-radius: 4px 5px 4px 4px;
+    border: 20px 10px 20px 20px;
+    width: 300px;
+    font-size: 15px;
+
+}
