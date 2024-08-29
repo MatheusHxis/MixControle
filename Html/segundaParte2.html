@@ -21,28 +21,13 @@
             </ul>
         </div>
     </main>
-    <script>
-        document.getElementById('botaoDeSaida').addEventListener('click', function() {
-            // Redireciona para o script de logout
-            window.location.href = '../php/logout.php';
-        });
-        function showForm(formId) {
-            // Esconde todos os formulários
-            var forms = document.querySelectorAll('.form-container');
-            forms.forEach(function(form) {
-                form.classList.remove('active');
-            });
 
-            // Exibe o formulário selecionado
-            var activeForm = document.getElementById(formId);
-            if (activeForm) {
-                activeForm.classList.add('active');
-            }
-        }
-    </script>
+    <div id="modalOverlay"></div>
+
     <div class="container">
         <!-- Formulários -->
-        <div class="form-container">
+        <div id="addItem" class="form-container">
+            <button class="close-btn" onclick="closeForm()">X</button>
             <h2>Adicionar Item</h2>
             <form action="../php/add_item.php" method="POST">
                 <label for="description">Descrição:</label>
@@ -57,7 +42,8 @@
             </form>
         </div>
 
-        <div class="form-container">
+        <div id="removeItem" class="form-container">
+            <button class="close-btn" onclick="closeForm()">X</button>
             <h2>Remover Item</h2>
             <form action="../php/remove_item.php" method="POST">
                 <label for="remove_id">ID do Item:</label>
@@ -66,7 +52,8 @@
             </form>
         </div>
 
-        <div class="form-container">
+        <div id="editItem" class="form-container">
+            <button class="close-btn" onclick="closeForm()">X</button>
             <h2>Editar Item</h2>
             <form action="../php/edit_item.php" method="POST">
                 <label for="edit_id">ID do Item:</label>
@@ -83,5 +70,39 @@
             </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById('botaoDeSaida').addEventListener('click', function() {
+            // Redireciona para o script de logout
+            window.location.href = '../php/logout.php';
+        });
+
+        function showForm(formId) {
+            // Esconde todos os formulários
+            var forms = document.querySelectorAll('.form-container');
+            var overlay = document.getElementById('modalOverlay');
+            forms.forEach(function(form) {
+                form.classList.remove('active');
+            });
+
+            // Exibe o formulário selecionado
+            var activeForm = document.getElementById(formId);
+            if (activeForm) {
+                activeForm.classList.add('active');
+            }
+
+            // Exibe a sobreposição
+            overlay.classList.add('active');
+        }
+
+        function closeForm() {
+            var forms = document.querySelectorAll('.form-container');
+            var overlay = document.getElementById('modalOverlay');
+            forms.forEach(function(form) {
+                form.classList.remove('active');
+            });
+            overlay.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
